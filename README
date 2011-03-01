@@ -1,0 +1,4 @@
+A simple bash script created from the information on: http://code.google.com/p/smali/wiki/DeodexInstructions. This script is used to deodex Android files in the /system/app or /system/framework folder.
+
+
+Tested on: Ubuntu 10.04 64bit
