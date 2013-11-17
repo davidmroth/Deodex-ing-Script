@@ -5,7 +5,7 @@ smalibaksmali_dir=/home/neel/smali
 
 clear; for x in `find -iname "*.odex"|sort`; do 
     odexFile=${x/\.\//}
-    [ -e ${x/odex/jar} ] && JarFile=${odexFile/odex/jar} || Jarfile=${odexFile/odex/apk}
+    [ -e ${x/odex/jar} ] && JarFile=${odexFile/odex/jar} || JarFile=${odexFile/odex/apk}
 
     echo "Uncompiling $odexFile"
     java -Xmx1024m -jar $smalibaksmali_dir/baksmali.jar -x $odexFile -o /tmp/$odexFile.out 
