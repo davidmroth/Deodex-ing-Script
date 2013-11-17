@@ -5,7 +5,7 @@ smalibaksmali_dir=/home/mistadman/bin/android_dev_tools
 
 clear; for x in `find -iname "*.odex"|sort`; do 
     odexFile=${x/\.\//}
-    [ -e ${x/odex/jar} ] && JarFile=${odexFile/odex/jar} || Jarfile=${odexFile/odex/apk}
+    [ -e ${x/odex/jar} ] && JarFile=${odexFile/odex/jar} || JarFile=${odexFile/odex/apk}
 
     echo "Uncompiling $odexFile"
     java -Xmx512m -jar $smalibaksmali_dir/baksmali.jar -x $odexFile -d $1 -o /tmp/$odexFile.out 
