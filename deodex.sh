@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ERROR=0
-smalibaksmali_dir=/home/mistadman/bin/android_dev_tools
+smalibaksmali_dir=/home/neel/smali
 
 clear; for x in `find -iname "*.odex"|sort`; do 
     odexFile=${x/\.\//}
