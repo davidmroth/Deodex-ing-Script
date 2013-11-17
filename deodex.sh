@@ -18,7 +18,7 @@ clear; for x in `find -iname "*.odex"|sort`; do
     if [ -e /tmp/$odexFile-classes.dex ]; then
         echo "Adding classes.dex to $JarFile"
         mv /tmp/$odexFile-classes.dex /tmp/classes.dex
-        zip -q $JarFile /tmp/classes.dex
+        zip $JarFile /tmp/classes.dex
         rm -rf /tmp/$odexFile.out /tmp/$odexFile-classes.dex /tmp/classes.dex
     else
         rm -rf /tmp/$odexFile.out /tmp/$odexFile-classes.dex /tmp/classes.dex
